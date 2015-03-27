@@ -7,9 +7,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import util.JSONConverter;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class GoogleSearchEngine extends AbstractSearchEngine {
 	
@@ -22,12 +19,12 @@ public class GoogleSearchEngine extends AbstractSearchEngine {
 		super("Google");
 	}
 	
-	public String search(String pQuery) throws JsonProcessingException
+	public void search(String pQuery)
 	{
 		//For now do not process null queries. Refactor this into an expression later.
 		if(pQuery== null)
 		{
-			return null;
+			return;
 		}
 		try{
 			String aSearchEngineName = getName();
@@ -52,13 +49,11 @@ public class GoogleSearchEngine extends AbstractSearchEngine {
 				}
   		    }
 	        setQueryResults(searchResults);
-	        return JSONConverter.getInstance().convert(searchResults);
 		  
 		}
 		catch(IOException e)
 		{
 			e.printStackTrace();
-			return null;
 		}
 	}
 	

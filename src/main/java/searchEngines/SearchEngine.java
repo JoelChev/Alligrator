@@ -29,5 +29,11 @@ public interface SearchEngine {
 	 * @return the name of this SearchEngine.
 	 */
 	public String getName();
+	
+	
+	/**
+	 * @param pQuery the query to search for in this SearchEngine.
+	 */
+	public void search(String pQuery);
 
 }

@@ -33,26 +33,11 @@ public class QueryResult {
 	}
 	
 	/**
-	 * An empty constructor for a QueryResult. Allows for an empty QueryResult to be constructed.
-	 */
-	public QueryResult()
-	{
-	}
-	
-	/**
 	 * @return the title of this QueryResult.
 	 */
 	public String getTitle()
 	{
 		return aTitle;
-	}
-	
-	/**
-	 * @param pTitle the title to set for this QueryResult.
-	 */
-	public void setTitle(String pTitle)
-	{
-		aTitle = pTitle;
 	}
 	
 	/**
@@ -64,27 +49,11 @@ public class QueryResult {
 	}
 	
 	/**
-	 * @param pSearchEngineName the search engine that returned this result.
-	 */
-	public void setQuery(String pSearchEngineName)
-	{
-		aSearchEngineName = pSearchEngineName;
-	}
-	
-	/**
 	 * @return the web address link for this query result.
 	 */
 	public String getLink()
 	{
 		return aLink;
-	}
-	
-	/**
-	 * @param pLink the web address link for this query result.
-	 */
-	public void setLink(String pLink)
-	{
-		aLink = pLink;
 	}
 	
 	/**
@@ -95,11 +64,4 @@ public class QueryResult {
 		return aSummary;
 	}
 	
-	/**
-	 * @param pSummary the summary to give this query result from the search engine.
-	 */
-	public void setSummary(String pSummary)
-	{
-		aSummary = pSummary;
-	}
 }
