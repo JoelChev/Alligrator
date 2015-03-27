@@ -32,6 +32,7 @@ public class GoogleSearchEngine extends AbstractSearchEngine {
 		    Document doc = Jsoup.connect(aUrl +pQuery).userAgent(aUserAgent).get();  
   		    for(int j=0; j<doc.select("div.srg").size(); j++)
   		    {
+  		    	//This section gets around the ads that are displayed.
   		    	Element resultDiv = doc.select("div.srg").get(j);
 				for(Element resultList : resultDiv.select("li"))
 				{
