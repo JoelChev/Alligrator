@@ -3,7 +3,7 @@ package searchEngines;
 /**
  * @author JoelChev
  * 
- * A representation of a given QueryResult to store later as a JSON file.
+ * A representation of a given QueryResult to return later in JSON format.
  *
  */
 public class QueryResult {

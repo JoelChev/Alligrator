@@ -8,9 +8,11 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-
-
-
+/**
+ * @author JoelChev
+ *
+ *This executes Bing searches for queries. It returns an ArrayList of QueryResults that can be aggregated.
+ */
 public class BingSearchEngine extends AbstractSearchEngine{
 	
 	private final String aUrl = "http://www.bing.com/search?q=";
@@ -24,16 +26,13 @@ public class BingSearchEngine extends AbstractSearchEngine{
 	
 	public void search(String pQuery)
 	{
-		//For now do not process null queries. Refactor this into an expression later.
-		if(pQuery== null)
-		{
-			return;
-		}
 		try{
 			String aSearchEngineName = getName();
 			ArrayList<QueryResult> searchResults = new ArrayList<QueryResult>();
 			String fullUrl = aUrl + pQuery;
 		    Document doc = Jsoup.connect(fullUrl).userAgent(aUserAgent).get(); 
+		    //Bing makes it very simple to parse for search results. They are listed in
+		    //the li.b_algo elements, so no further parsing is needed from here.
 		    Elements resultDiv = doc.select("li.b_algo");
 		    for(int i =0; i<resultDiv.size(); i++)
 		    {

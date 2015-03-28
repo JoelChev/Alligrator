@@ -9,6 +9,12 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 
+/**
+ * @author JoelChev
+ * 
+ * This class executes Yahoo searches for queries. 
+ *
+ */
 public class YahooSearchEngine extends AbstractSearchEngine{
 	
 private final String aUrl = "https://ca.search.yahoo.com/search?p=";
@@ -32,11 +38,17 @@ private final String aUrl = "https://ca.search.yahoo.com/search?p=";
 			ArrayList<QueryResult> searchResults = new ArrayList<QueryResult>();
 			String fullUrl = aUrl + pQuery;
 		    Document doc = Jsoup.connect(fullUrl).userAgent(aUserAgent).get(); 
+		    //This gets the list of results for the query to parse.
 		    Elements resultDiv = doc.select("ol");
+		    //The next two selections are simply filters to ensure that only 
+		    //valid results (not ads or non result blocks) are parsed.
 		    Elements resultSection = resultDiv.select("[start]");
 		    Elements resultList= resultSection.select("li");
 		    for(Element resultBlock: resultList)
 		    {
+		    	//If there is no easily parsable summary for a given result, it is skipped. This usually involves
+		    	//a weird article being sponsored from something like National Geographic which does
+		    	//not follow the normal article format.
 		    	if(resultBlock.select(".abstr").first()==null)
 		    	{
 		    		continue;

@@ -21,11 +21,6 @@ public interface SearchEngine {
 	void setQueryResults(ArrayList<QueryResult> pQueryResults);
 	
 	/**
-	 * @param pName the Name to give the SearchEngine.
-	 */
-	void setName(String pName);
-	
-	/**
 	 * @return the name of this SearchEngine.
 	 */
 	public String getName();
