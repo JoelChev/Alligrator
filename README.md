@@ -8,7 +8,7 @@ To use this application:
 2. Navigate to the target folder of the project on your system.
 
 3. In the terminal or in the command line write the following: (you are in ../target) java -jar alliGrator-0.0.1.jar
-NOTE: If localhost:8080 is currently in use, you may need to write the above command with the following at the end: --server.port=8181 (or some other port which is currently free) 
+NOTE: If localhost:8080 is currently in use (Spring.io will give you an error if you try to launch the jar and it is), you will need to write the above command with the following at the end: --server.port=8181 (or some other port which is currently free).
 
 4. Through the Spring.io API the Spring Boot will now launch a Server on your machine. Make sure to close this server when
 you are done with it!
