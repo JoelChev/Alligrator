@@ -34,6 +34,7 @@ public class BingSearchEngine extends AbstractSearchEngine{
 		    //Bing makes it very simple to parse for search results. They are listed in
 		    //the li.b_algo elements, so no further parsing is needed from here.
 		    Elements resultDiv = doc.select("li.b_algo");
+		    //From here, just iterate through all the result blocks that are found.
 		    for(int i =0; i<resultDiv.size(); i++)
 		    {
 		    	Element resultBlock = resultDiv.get(i);

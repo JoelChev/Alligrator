@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * @author JoelChev
  * 
  * An interface to abstract the different SearchEngines to be used.
+ * This will allow for polymorphism when dealing with all of the SearchEngines.
  *
  */
 public interface SearchEngine {

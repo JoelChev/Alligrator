@@ -8,13 +8,13 @@ package searchEngines;
  */
 public class QueryResult {
 	
-	private String aSearchEngineName;
+	private String aSearchEngineName; //The name of the SearchEngine that generated this result.
 
-	private String aTitle;
+	private String aTitle; //The title of this result.
 	
-	private String aLink;
+	private String aLink; //The URL link for this result.
 	
-	private String aSummary;
+	private String aSummary; // The summary rendered for this result.
 	
 	/**
 	 * @param pQuery the Query for this QueryResult

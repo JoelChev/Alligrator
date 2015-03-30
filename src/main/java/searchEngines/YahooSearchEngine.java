@@ -17,7 +17,7 @@ import org.jsoup.select.Elements;
  */
 public class YahooSearchEngine extends AbstractSearchEngine{
 	
-private final String aUrl = "https://ca.search.yahoo.com/search?p=";
+	private final String aUrl = "https://ca.search.yahoo.com/search?p=";
 	
 	private final String aUserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168";
 	
@@ -28,11 +28,6 @@ private final String aUrl = "https://ca.search.yahoo.com/search?p=";
 	
 	public void search(String pQuery)
 	{
-		//For now do not process null queries. Refactor this into an expression later.
-		if(pQuery== null)
-		{
-			return;
-		}
 		try{
 			String aSearchEngineName = getName();
 			ArrayList<QueryResult> searchResults = new ArrayList<QueryResult>();

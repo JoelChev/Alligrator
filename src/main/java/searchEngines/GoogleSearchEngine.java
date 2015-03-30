@@ -52,7 +52,7 @@ public class GoogleSearchEngine extends AbstractSearchEngine {
 	{
 		//Determines if a preview box has been rendered or not. If one has, skip this method as 
 		//no useful queries will come from it. These preview boxes tend to be generated
-		//when things like Scientific queries (like Coulomb's law) are entered as queries, but
+		//when scientific topics (like Coulomb's law) are entered as queries, but
 		//in general they do not appear.
 	    Element aPreviewBox = pDocument.select("div._Pre").first();
 	    if(aPreviewBox != null)

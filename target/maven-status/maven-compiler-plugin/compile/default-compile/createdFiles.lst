@@ -1,7 +1,7 @@
 exceptions\EmptyResultsException.class
 searchEngines\BingSearchEngine.class
 searchEngines\SearchEngineAggregator.class
-webLaunch\ebayAggregate.class
+webLaunch\alliGrator.class
 searchEngines\GoogleSearchEngine.class
 searchEngines\SearchEngine.class
 searchEngines\AbstractSearchEngine.class

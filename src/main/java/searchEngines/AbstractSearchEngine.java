@@ -12,8 +12,10 @@ import java.util.ArrayList;
  */
 public abstract class AbstractSearchEngine implements SearchEngine {
 	
+	//The name of this SearchEngine.
 	private String aName;
 	
+	//The QueryResults that are retrieved by this Search Engine. 
 	private ArrayList<QueryResult> aQueryResults;
 	
 	
