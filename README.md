@@ -13,9 +13,9 @@ NOTE: If localhost:8080 is currently in use (Spring.io will give you an error if
 4. Through the Spring.io API the Spring Boot will now launch a Server on your machine. Make sure to close this server when
 you are done with it!
 
-(Perform the next steps in the order you desire/are able to) :
+(Perform the next steps in the order you desire/are able to modify to the server port you are using if you changed it) :
 
-5. Assuming you are using port 8080, in the terminal (UNIX based systems) write: curl http://localhost8080/search to get the default query output in JSON.
+5. In the terminal (UNIX based systems) write: curl http://localhost8080/search to get the default query output in JSON.
 If you would like to see variable query results, write: curl http://localhost8080/search?query=****, where **** is the query
 you want to obtain.
 
