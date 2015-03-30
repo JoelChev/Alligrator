@@ -2,6 +2,7 @@
 A Java based search engine aggregator that outputs JSON formatted results for Google, Yahoo and Bing queries.
 
 To use this application:
+
 1. Clone the repository or navigate to the Initial Release downloads in the release section.
 
 2. Navigate to the target folder of the project on your system.
